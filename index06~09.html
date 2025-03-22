@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyFormTags</title>
+</head>
+<body>
+  <form>
+    <div>
+      <!-- labelの中に直接入力部品を入れることで、id属性を使用しなくても関連付けすることが出来る -->
+      <label>
+        お名前
+        <input type="text">
+      </label>
+    </div>
+    <!-- input type="checkbox" チェックボックスが作成できる -->
+     <!-- fieldset 入力部品をグループ化する -->
+     <!-- legend 入力部品のグループに対しての説明を加える -->
+    <div>
+      <fieldset>
+        <legend>対象の商品</legend>
+        <label><input type="checkbox"> 商品A</label>
+        <label><input type="checkbox"> 商品B</label>
+        <label><input type="checkbox"> 商品C</label>
+      </fieldset>
+    </div>
+
+    <!-- input type="radio" ラジオボタンの作成 -->
+    <!-- name属性に指定した値が同じボタンが同時に選択出来ないように制御できる -->
+    <div>
+      <fieldset>
+        <legend>延長保証</legend>
+        <label><input type="radio" name="warranty"> 加入済</label>
+        <label><input type="radio" name="warranty"> 未加入</label>
+        <label><input type="radio" name="warranty"> わからない</label>
+      </fieldset>
+    </div>
+
+    <!-- select ドロップダウンリストを作成する -->
+    <!-- option ドロップダウンリストの要素 -->
+    <div>
+      <label>
+        種別
+        <select>
+          <option>-- お問い合わせ種別を選択してください --</option>
+          <option>商品が届かない</option>
+          <option>商品が壊れた</option>
+          <option>間違えて注文した</option>
+          <option>決済手段を変えたい</option>
+          <option>その他</option>
+        </select>
+      </label>
+
+      <!-- size属性 3行分のリストを表示 -->
+      <!-- multiple属性 複数選択可能 -->
+      <label>
+        種別
+        <select size="3" multiple="multiple">
+          <option>商品が届かない</option>
+          <option>商品が壊れた</option>
+          <option>間違えて注文した</option>
+          <option>決済手段を変えたい</option>
+          <option>その他</option>
+        </select>
+      </label>
+
+    </div>
+    <div>
+      <label>
+        内容
+        <textarea></textarea>
+      </label>
+    </div>
+  </form>
+</body>
+</html>
